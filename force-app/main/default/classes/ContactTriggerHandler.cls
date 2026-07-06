@@ -1,3 +1,12 @@
+/**
+ * Each Account can have multiple Contacts, but only one Contact per Account 
+ * can have the custom field IsLatest__c set to true. 
+ * Write a trigger that runs after a Contact is inserted. 
+ * The trigger should check if no other Contact under 
+ * the same Account has IsLatest__c = true, and if so, set it to true for the 
+ * newly inserted Contact.
+ */
+
 public with sharing class ContactTriggerHandler {
     
     public static void handleIsLatest(List<Contact> newContacts) {
